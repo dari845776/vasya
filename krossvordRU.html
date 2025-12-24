@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Новогодний кроссворд — 10 слов</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #e6f7ff;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #d32f2f;
+      margin-bottom: 20px;
+    }
+    .crossword {
+      display: inline-block;
+      border-collapse: collapse;
+      margin: 20px auto;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .crossword td {
+      width: 40px;
+      height: 40px;
+      border: 1px solid #000;
+      text-align: center;
+      vertical-align: middle;
+      font-weight: bold;
+      font-size: 15px;
+      background: white;
+    }
+    .black {
+      background: #000;
+    }
+    .clues {
+      max-width: 650px;
+      margin: 30px auto;
+      text-align: left;
+      padding: 16px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .clues h2 {
+      color: #1565c0;
+      margin-top: 18px;
+    }
+    .clues ol {
+      padding-left: 20px;
+    }
+    .clues li {
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Новогодний кроссворд (10 слов)</h1>
 
+  <!-- Сетка 11×11 -->
+  <table class="crossword" aria-label="Новогодний кроссворд">
+    <tr>
+      <td>Д</td><td>Е</td><td>Д</td><td>М</td><td>О</td><td>Р</td><td>О</td><td>З</td><td class="black"></td><td class="black"></td><td class="black"></td>
+    </tr>
+    <tr>
+      <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td>У</td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td>
+    </tr>
+    <tr>
+      <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td>Р</td><td class="black"></td><td>С</td><td class="black"></td><td class="black"></td><td class="black"></td><td>З</td>
+    </tr>
+    <tr>
+      <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td>О</td><td class="black"></td><td>В</td><td class="black"></td><td class="black"></td><td class="black"></td><td>И</td>
+    </tr>
+    <tr>
+      <td>С</td><td>Н</td><td>Е</td><td>Г</td><td>О</td><td>В</td><td>И</td><td>К</td><td class="black"></td><td class="black"></td><td>М</td>
+    </tr>
+    <tr>
+      <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td>Ч</td><td class="black"></td><td>Е</td><td class="black"></td><td class="black"></td><td class="black"></td><td>А</td>
+    </tr>
+    <tr>
+      <td>Х</td><td>Л</td><td>О</td><td>П</td><td>У</td><td>Ш</td><td>К</td><td>А</td><td class="black"></td><td>П</td><td class="black"></td>
+    </tr>
+    <tr>
+      <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td>К</td><td class="black"></td><td>Т</td><td class="black"></td><td>О</td><td>О</td><td>Д</td>
+    </tr>
+    <tr>
+      <td>Н</td><td>О</td><td>В</td><td>Ы</td><td>Й</td><td>Г</td><td>О</td><td>Д</td><td>Д</td><td>А</td><td>Р</td>
+    </tr>
+    <tr>
+      <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td>А</td><td>К</td><td>О</td>
+    </tr>
+    <tr>
+      <td class="black"></td><td>М</td><td>А</td><td>Н</td><td>Д</td><td>А</td><td>Р</td><td>И</td><td>Н</td><td class="black"></td><td>К</td>
+    </tr>
+  </table>
+
+  <div class="clues">
+    <h2>По горизонтали:</h2>
+    <ol>
+      <li>Сказочный дедушка с посохом и мешком подарков (8 букв)</li> <!-- ДЕДМОРОЗ -->
+      <li>Зимняя фигура из снега с ведром на голове (9 букв)</li> <!-- СНЕГОВИК -->
+      <li>Громкая бумажная забава на празднике (9 букв)</li> <!-- ХЛОПУШКА -->
+      <li>Главный праздник января (9 букв, без пробела)</li> <!-- НОВЫЙГОД -->
+      <li>То, что дарят под ёлкой (8 букв)</li> <!-- ПОДАРОК -->
+    </ol>
+
+    <h2>По вертикали:</h2>
+    <ol>
+      <li>Внучка Деда Мороза (10 букв)</li> <!-- СНЕГУРОЧКА -->
+      <li>Яркий цитрусовый фрукт — символ Нового года (9 букв)</li> <!-- МАНДАРИН -->
+      <li>То, что делает ёлку сияющей (4 буквы)</li> <!-- СВЕТ -->
+      <li>Холодное время года, когда приходит Дед Мороз (5 букв)</li> <!-- ЗИМА -->
+      <li>Нарядное дерево в гостиной (4 буквы)</li> <!-- ЁЛКА -->
+    </ol>
+  </div>
+</body>
+</html>
