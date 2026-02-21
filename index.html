@@ -4,6 +4,39 @@
     <meta charset="UTF-8">
     <title>Мой блог</title>
     <link type="text/css" rel="stylesheet" href="style.css" />
+    <style>
+        /* Стили для блока с ответом */
+        .bot-response {
+            background: #f0f7ff;
+            border-left: 4px solid #007bff;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            font-family: sans-serif;
+        }
+        .bot-response h3 {
+            margin-top: 0;
+            color: #0056b3;
+        }
+        .bot-response ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+        .bot-response code {
+            background: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        .footer-info {
+            background: #f8f9fa;
+            padding: 15px;
+            margin-top: 30px;
+            border-top: 1px solid #dee2e6;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
 </head>
 <body> 
     <blockquote class="q">Путешествие в тысячу миль начинается с одного шага (Лао Цзы)</blockquote>
@@ -18,13 +51,13 @@
     </p>
 
     <h2>20.12.2025</h2>
-    <p>Куратор-1 раз</p>
+    <p>Куратор — 1 раз</p>
     
     <p>
         Иконки: 
-        <a href="https://www.flaticon.com/ru/free-icons/-" 
+        <a href="https://www.flaticon.com/ru/free-icons/" 
            title="рождественский орнамент иконки">
-            Рождественский орнамент иконки от Pixelmeetup - Flaticon
+            Рождественский орнамент иконки от Pixelmeetup — Flaticon
         </a>
     </p>
 
@@ -67,26 +100,43 @@
         <a href="krossvordEN.html">Английский кроссворд</a>
     </p>
 
-</body>
-</html>
-cbody>
-<р>Создано: 14 января 2026</р>
-<р>Домен - dari845776 github io . </p>
-<p><a href="mailto:ilyashevich-2018@mail.ru">Напишите мне</а><р>
+    <!-- Блок с ответом модели -->
+    <div class="bot-response">
+        <h3>🔧 Технические рекомендации по коду</h3>
+        <p><strong>Исправленные ошибки:</strong></p>
+        <ul>
+            <li><code>&lt;cbody&gt;</code> → <code>&lt;/body&gt;</code> (закрывающий тег)</li>
+            <li><code>&lt;р&gt;</code> (кириллица) → <code>&lt;p&gt;</code> (латиница)</li>
+            <li><code>&lt;hre&gt;</code> → <code>&lt;hr&gt;</code> или <code>&lt;pre&gt;</code></li>
+            <li>Убраны лишние пробелы в концах ссылок <code>href=".../  "</code></li>
+            <li>Контент футера перенесён внутрь <code>&lt;body&gt;</code></li>
+        </ul>
+        <p><strong>Что уже хорошо:</strong> ✅ семантика, ✅ <code>alt</code> у изображений, ✅ <code>rel="noopener"</code> для внешних ссылок</p>
+    </div>
+
+    <!-- Футер с информацией -->
+    <div class="footer-info">
+        <p><strong>Создано:</strong> 14 января 2026</p>
+        <p><strong>Домен:</strong> dari845776.github.io</p>
+        <p><a href="mailto:ilyashevich-2018@mail.ru">✉️ Напишите мне</a></p>
+    </div>
 
     <h2>19.01.2025</h2>
-
     <h1 class="main-title">Решение задач по шифру Цезаря</h1>
+    
     <h3>1. Определение ключей шифра Цезаря</h3>
-    <p><strong>a. АПЕЛЬСИН-ЫЬЛГЕЙМ</strong></p>
-    <pre>Ключ:k = 18</pre>
+    <p><strong>а. АПЕЛЬСИН → ЫЬЛГЕЙМ</strong></p>
+    <pre>Ключ: k = 18</pre>
 
-    <p><strong>б. АБРИКОС- ЫЬЛГЕЙМ</strong></p>
+    <p><strong>б. АБРИКОС → ЫЬЛГЕЙМ</strong></p>
     <pre>Ключ: k = 28</pre>
-     <h3>3. Шифрование фамилии с ключом k = 10</h3>
+    
+    <h3>3. Шифрование фамилии с ключом k = 10</h3>
     <p><strong>Фамилия: ИЛЬЯШЕВИЧ</strong></p>
-    <hre>Зашифрованная фамилия:ЧЩОПЙФТЧК</hre>
+    <pre>Зашифрованная фамилия: ЧЩОПЙФТЧК</pre>
 
-  <h2>19.01.2026</h2>
+    <h2>19.01.2026</h2>
+    <p><em>Пропуск — 3 раза</em></p>
 
-    пропуск-3 раза
+</body>
+</html>
