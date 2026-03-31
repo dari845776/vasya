@@ -36,6 +36,63 @@
             font-size: 0.9em;
             color: #555;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 14px 0 20px;
+            background: #ffffff;
+            border: 1px solid #d6dbe3;
+            border-radius: 10px;
+            overflow: hidden;
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 14px;
+        }
+        th, td {
+            border: 1px solid #e4e8ef;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background: #1f2937;
+            color: #ffffff;
+            font-weight: 600;
+            letter-spacing: 0.2px;
+        }
+        tr:nth-child(even) td {
+            background: #f8fafc;
+        }
+        .group {
+            margin-bottom: 22px;
+            padding: 10px 12px;
+            background: #ffffff;
+            border: 1px solid #e4e8ef;
+            border-radius: 8px;
+        }
+        .group h3 {
+            margin: 4px 0 10px;
+            color: #374151;
+        }
+        .results {
+            background: #ffffff;
+            border: 1px solid #e4e8ef;
+            border-radius: 8px;
+            padding: 12px 14px;
+            margin: 12px 0 18px;
+        }
+        .results p {
+            margin: 6px 0;
+        }
+        .lab-2026 {
+            margin-top: 10px;
+            padding: 8px 0 2px;
+        }
+        .lab-2026 h3 {
+            margin-top: 16px;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+            color: #1f2937;
+        }
     </style>
 </head>
 <body> 
@@ -171,7 +228,93 @@
     <p><em>Пропуск — 3 раза</em></p>
 
     <h2>30.03.2026</h2>
-    <a href="https://github.com/dari845776/LabaAnalysis.git">Ссылка на код</a>
+    <div class="lab-2026">
+    <p><a href="https://github.com/dari845776/LabaAnalysis.git">Ссылка на код</a></p>
+
+    <h3>Первые строки исходных данных</h3>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>gender</th>
+            <th>race/ethnicity</th>
+            <th>parental level of education</th>
+            <th>...</th>
+            <th>math score</th>
+            <th>reading score</th>
+            <th>writing score</th>
+        </tr>
+        <tr><td>0</td><td>female</td><td>group B</td><td>bachelor's degree</td><td>...</td><td>72</td><td>72</td><td>74</td></tr>
+        <tr><td>1</td><td>female</td><td>group C</td><td>some college</td><td>...</td><td>69</td><td>90</td><td>88</td></tr>
+        <tr><td>2</td><td>female</td><td>group B</td><td>master's degree</td><td>...</td><td>90</td><td>95</td><td>93</td></tr>
+        <tr><td>3</td><td>male</td><td>group A</td><td>associate's degree</td><td>...</td><td>47</td><td>57</td><td>44</td></tr>
+        <tr><td>4</td><td>male</td><td>group C</td><td>some college</td><td>...</td><td>76</td><td>78</td><td>75</td></tr>
+    </table>
+
+    <h3>Данные по классам (группам race/ethnicity)</h3>
+
+    <div class="group">
+        <h3>Group A</h3>
+        <table>
+            <tr><th>#</th><th>gender</th><th>parental level</th><th>math</th><th>reading</th><th>writing</th></tr>
+            <tr><td>3</td><td>male</td><td>associate's degree</td><td>47</td><td>57</td><td>44</td></tr>
+        </table>
+    </div>
+
+    <div class="group">
+        <h3>Group B</h3>
+        <table>
+            <tr><th>#</th><th>gender</th><th>parental level</th><th>math</th><th>reading</th><th>writing</th></tr>
+            <tr><td>0</td><td>female</td><td>bachelor's degree</td><td>72</td><td>72</td><td>74</td></tr>
+            <tr><td>2</td><td>female</td><td>master's degree</td><td>90</td><td>95</td><td>93</td></tr>
+        </table>
+    </div>
+
+    <div class="group">
+        <h3>Group C</h3>
+        <table>
+            <tr><th>#</th><th>gender</th><th>parental level</th><th>math</th><th>reading</th><th>writing</th></tr>
+            <tr><td>1</td><td>female</td><td>some college</td><td>69</td><td>90</td><td>88</td></tr>
+            <tr><td>4</td><td>male</td><td>some college</td><td>76</td><td>78</td><td>75</td></tr>
+        </table>
+    </div>
+
+    <h3>Процесс обучения (ошибка по эпохам)</h3>
+    <table>
+        <tr><th>Эпоха</th><th>Ошибка (MSE)</th></tr>
+        <tr><td>500</td><td>0.021573</td></tr>
+        <tr><td>1000</td><td>0.020473</td></tr>
+        <tr><td>1500</td><td>0.019466</td></tr>
+        <tr><td>2000</td><td>0.018702</td></tr>
+        <tr><td>2500</td><td>0.018262</td></tr>
+        <tr><td>3000</td><td>0.018065</td></tr>
+        <tr><td>3500</td><td>0.017992</td></tr>
+        <tr><td>4000</td><td>0.017968</td></tr>
+        <tr><td>4500</td><td>0.017960</td></tr>
+        <tr><td>5000</td><td>0.017958</td></tr>
+    </table>
+
+    <h3>Итоговые результаты</h3>
+    <div class="results">
+        <p><strong>Ошибка на обучении (MSE)</strong> = 0.017952081698807775</p>
+        <p><strong>Ошибка на тесте (MSE)</strong> = 0.026271943592190098</p>
+        <p><strong>Ошибка на тесте (MSE, реальные оценки)</strong> = 262.7194359219009</p>
+    </div>
+
+    <h3>Примеры прогнозов (реальные оценки)</h3>
+    <table>
+        <tr><th>№</th><th>Истинно</th><th>Прогноз</th></tr>
+        <tr><td>1</td><td>91.0</td><td>66.176674891567</td></tr>
+        <tr><td>2</td><td>53.0</td><td>60.8696706301686</td></tr>
+        <tr><td>3</td><td>80.0</td><td>70.35795839262053</td></tr>
+        <tr><td>4</td><td>74.0</td><td>59.17732520904004</td></tr>
+        <tr><td>5</td><td>84.0</td><td>76.10423513081186</td></tr>
+        <tr><td>6</td><td>81.0</td><td>59.17732520904004</td></tr>
+        <tr><td>7</td><td>69.0</td><td>65.1768049371751</td></tr>
+        <tr><td>8</td><td>54.0</td><td>72.03712601666551</td></tr>
+        <tr><td>9</td><td>87.0</td><td>59.17732520904004</td></tr>
+        <tr><td>10</td><td>51.0</td><td>76.10423513081186</td></tr>
+    </table>
+    </div>
 
 </body>
 </html>
