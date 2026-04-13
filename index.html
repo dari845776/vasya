@@ -93,6 +93,17 @@
             font-size: 1.1rem;
             color: #1f2937;
         }
+        .group .diagram-links {
+            margin: 8px 0 10px;
+            font-size: 0.95em;
+        }
+        .group img[alt] {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #e4e8ef;
+            border-radius: 8px;
+            margin-top: 6px;
+        }
     </style>
 </head>
 <body> 
@@ -118,8 +129,8 @@
     </div>
     
     <p>
-        <a href="credit_model.py" download>📥 Скачать код модели</a> | 
-        <a href="kasko_dataset.csv" download>📥 Скачать датасет КАСКО</a>
+        <a href="credit_model.py">Код модели (credit_model.py)</a> ·
+        <a href="kasko_dataset.csv">Датасет КАСКО (CSV)</a>
     </p>
     
     <blockquote class="q">Данные — это новая нефть, а модели — двигатель прогресса.</blockquote>
@@ -314,6 +325,82 @@
         <tr><td>9</td><td>87.0</td><td>59.17732520904004</td></tr>
         <tr><td>10</td><td>51.0</td><td>76.10423513081186</td></tr>
     </table>
+    </div>
+
+    <h2>13.04.2026</h2>
+    <p><strong>Тема:</strong> Схемы индексных файлов — стоматологическое отделение (врач, медсестра, операция)</p>
+
+    <div class="bot-response">
+        <h3>Сущности и признаки</h3>
+        <ul>
+            <li><strong>Врач:</strong> код врача, ФИО, специализация, кабинет, стаж.</li>
+            <li><strong>Медсестра:</strong> код медсестры, ФИО, категория, смена, код врача.</li>
+            <li><strong>Операция:</strong> код операции, вид операции, дата, длительность, код врача.</li>
+        </ul>
+        <p>Ниже размещены все 7 файлов, как требовалось в задании.</p>
+    </div>
+
+    <div class="group">
+        <h3>1. Общая иерархическая модель</h3>
+        <p>Общая иерархическая модель стоматологического отделения с сущностями «врач», «медсестра» и «операция».</p>
+        <p class="diagram-links">
+            <a href="diagrams/01_hierarchy_dental_department.drawio" download>Скачать .drawio</a>
+        </p>
+        <img src="diagrams/01_hierarchy_dental_department.png" alt="Общая иерархическая модель">
+    </div>
+
+    <div class="group">
+        <h3>2. Врач</h3>
+        <p>Схема основного индекса для сущности «врач».</p>
+        <p class="diagram-links">
+            <a href="diagrams/02_primary_index_doctor.drawio" download>Скачать .drawio</a>
+        </p>
+        <img src="diagrams/02_primary_index_doctor.png" alt="Врач">
+    </div>
+
+    <div class="group">
+        <h3>3. Медсестра</h3>
+        <p>Схема основного индекса для сущности «медсестра».</p>
+        <p class="diagram-links">
+            <a href="diagrams/03_primary_index_nurse.drawio" download>Скачать .drawio</a>
+        </p>
+        <img src="diagrams/03_primary_index_nurse.png" alt="Медсестра">
+    </div>
+
+    <div class="group">
+        <h3>4. Операция</h3>
+        <p>Схема основного индекса для сущности «операция».</p>
+        <p class="diagram-links">
+            <a href="diagrams/04_primary_index_operation.drawio" download>Скачать .drawio</a>
+        </p>
+        <img src="diagrams/04_primary_index_operation.png" alt="Операция">
+    </div>
+
+    <div class="group">
+        <h3>5. Врач (по полю «Специализация»)</h3>
+        <p>Вторичный индекс для сущности «врач» по полю «специализация».</p>
+        <p class="diagram-links">
+            <a href="diagrams/05_secondary_index_doctor_specialization.drawio" download>Скачать .drawio</a>
+        </p>
+        <img src="diagrams/05_secondary_index_doctor_specialization.png" alt="Врач (по полю «Специализация»)">
+    </div>
+
+    <div class="group">
+        <h3>6. Медсестра (по полю «Смена»)</h3>
+        <p>Вторичный индекс для сущности «медсестра» по полю «смена».</p>
+        <p class="diagram-links">
+            <a href="diagrams/06_secondary_index_nurse_shift.drawio" download>Скачать .drawio</a>
+        </p>
+        <img src="diagrams/06_secondary_index_nurse_shift.png" alt="Медсестра (по полю «Смена»)">
+    </div>
+
+    <div class="group">
+        <h3>7. Операция (по полю «Дата операции»)</h3>
+        <p>Вторичный индекс для сущности «операция» по полю «дата».</p>
+        <p class="diagram-links">
+            <a href="diagrams/07_secondary_index_operation_date.drawio" download>Скачать .drawio</a>
+        </p>
+        <img src="diagrams/07_secondary_index_operation_date.png" alt="Операция (по полю «Дата операции»)">
     </div>
 
 </body>
